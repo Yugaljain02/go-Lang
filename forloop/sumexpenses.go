@@ -5,7 +5,8 @@ import "fmt"
 
 func main(){
 	total := 0
-	for total := 1; total<=7; total++{
+	for i := 1; i<=7; i++{
+		total+=i
 		fmt.Println("sum is ",total)
 	}
 }
