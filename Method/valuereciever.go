@@ -11,7 +11,7 @@ func (u *user)update(){
 }
 
 func main(){
-	s :=user{
+	s :=&user{
 		name : "Yugal",
 	}
 	s.update()
