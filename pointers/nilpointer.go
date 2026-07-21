@@ -6,3 +6,4 @@ func main(){
 	var b *int
 	fmt.Println(*b)
 }
+//
