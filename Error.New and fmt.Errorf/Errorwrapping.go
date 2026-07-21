@@ -5,12 +5,12 @@ import (
 	"errors"
 )
  func database() error{
-     return errors.New("database connection failed")
+     return errors.New("database connection failed!!")
  }
     func saveuser() error{
 		err := database()
 		if err != nil{
-			return fmt.Errorf("user is not saved %w",err)
+			return fmt.Errorf("user is not saved!! %v",err)
 		}
 		return nil
 	}
@@ -18,7 +18,7 @@ import (
 	err := saveuser()
 
 	if err != nil {
-		return fmt.Errorf("registration failed !! %w",err)
+		return fmt.Errorf("registration failed !! %v",err)
  }
  return nil
  }
