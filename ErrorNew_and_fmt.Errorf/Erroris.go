@@ -3,6 +3,7 @@ import (
 	"errors" 
        "fmt"
 )
+
 var ErrDb   = errors.New("Database connection failed")
 func database() error {
 	return ErrDb 
