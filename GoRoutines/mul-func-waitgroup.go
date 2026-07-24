@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"sync"
 )
-func worker(id int,wg *sync.WaitGroup){
+
+func worker(id int, wg *sync.WaitGroup) {
 	defer wg.Done()
-	
-		fmt.Println("worker")
-	
+
+	fmt.Println("worker")
+
 }
-func main(){
+func main() {
 	var wg sync.WaitGroup
 
 	wg.Add(3) // 3 goroutine

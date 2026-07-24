@@ -1,16 +1,19 @@
 package main
+
 import (
-    "sync"	
 	"fmt"
+	"sync"
 )
- var once sync.Once
-func initialise(){
+
+var once sync.Once
+
+func initialise() {
 	fmt.Println("hello")
 }
-func main(){
+func main() {
 
 	once.Do(initialise)
 	once.Do(initialise)
-    once.Do(initialise)
+	once.Do(initialise)
 
 }

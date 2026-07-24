@@ -10,17 +10,16 @@ var mu sync.Mutex
 
 func increment(wg *sync.WaitGroup) {
 	defer wg.Done()
-    mu.Lock()
+	mu.Lock()
 	defer mu.Unlock()
 
 	for i := 0; i < 1000; i++ {
 		counter++
-		if counter==3 {
+		if counter == 3 {
 			return
+		}
 	}
 }
-}
-	
 
 func main() {
 

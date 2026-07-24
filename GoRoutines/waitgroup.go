@@ -1,29 +1,29 @@
 package main
 
-import(
-	"sync"
+import (
 	"fmt"
+	"sync"
 )
-  func iterate(wg *sync.WaitGroup){
+
+func iterate(wg *sync.WaitGroup) {
 
 	defer wg.Done()
 
-	for i:=0; i<5; i++{
-    
+	for i := 0; i < 5; i++ {
+
 		fmt.Println(i)
 	}
-	
 
-  }
-func main(){
+}
+func main() {
 
-    var wg sync.WaitGroup 
+	var wg sync.WaitGroup
 
-    wg.Add(1)
+	wg.Add(1)
 
-    go iterate(&wg)
+	go iterate(&wg)
 
-    wg.Wait()
+	wg.Wait()
 
-    fmt.Println("Main finished")
+	fmt.Println("Main finished")
 }

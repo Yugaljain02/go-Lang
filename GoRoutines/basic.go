@@ -10,9 +10,9 @@ func A() {
 	time.Sleep(2 * time.Second)
 	fmt.Println("A End")
 }
-func B(){
+func B() {
 	fmt.Println("B started")
-    time.Sleep(2 * time.Second)
+	time.Sleep(2 * time.Second)
 	fmt.Println("B is finished")
 }
 
@@ -21,5 +21,6 @@ func main() {
 	go A()
 	fmt.Println("2")
 	B()
-//time.Sleep(1 * time.Second)
+	// time.Sleep(1 * time.Second)
+
 }

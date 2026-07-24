@@ -1,12 +1,13 @@
 package main
+
 import "fmt"
 
-func main(){
+func main() {
 	ch := make(chan string)
 
-	go func(){
+	go func() {
 		ch <- "Pizza"
-	 }()
+	}()
 	msg := <-ch
 	fmt.Println(msg)
 }

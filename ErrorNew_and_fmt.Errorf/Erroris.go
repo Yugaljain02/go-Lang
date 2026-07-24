@@ -1,31 +1,33 @@
 package main
+
 import (
-	"errors" 
-       "fmt"
+	"errors"
+	"fmt"
 )
 
-var ErrDb   = errors.New("Database connection failed")
+var ErrDb = errors.New("Database connection failed")
+
 func database() error {
-	return ErrDb 
+	return ErrDb
 }
-func saveuser()error {
+func saveuser() error {
 	err := database()
-	if err!=nil{
+	if err != nil {
 		return fmt.Errorf("user is not saved %w", err)
 	}
 	return nil
 }
 
-func main(){
+func main() {
 	err := saveuser()
-	if err!=nil {
+	if err != nil {
 		fmt.Println("Actual Error")
 		fmt.Println(err)
-        fmt.Println()
+		fmt.Println()
 
-		if errors.Is(err,ErrDb){
-		fmt.Println("Database error occured")
+		if errors.Is(err, ErrDb) {
+			fmt.Println("Database error occured")
+		}
+
 	}
-
-}
 }

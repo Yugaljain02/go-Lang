@@ -46,7 +46,7 @@ func main() {
 	go readprice(2, &wg)
 
 	go writeprice(500, &wg)
-	
+
 	go writeprice(500, &wg)
 
 	wg.Wait()

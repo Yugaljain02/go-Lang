@@ -1,18 +1,20 @@
 package main
 
- import (
+import (
+	"errors"
 	"fmt"
-    "errors")
-func register(age int) error{
-	if age<18 {
+)
+
+func register(age int) error {
+	if age < 18 {
 		return errors.New("age must be greater then 17")
 	}
 	return nil
 }
 
-func main(){
+func main() {
 	err := register(13)
-	if err !=nil{
-		fmt.Println(err) 
+	if err != nil {
+		fmt.Println(err)
 	}
 }

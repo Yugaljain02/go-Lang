@@ -1,7 +1,8 @@
 package main
+
 import "fmt"
 
-func main(){
+func main() {
 	fmt.Println("first")
 	panic("something went wrong")
 	fmt.Println("second")

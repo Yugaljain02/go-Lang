@@ -1,12 +1,13 @@
 package main
+
 import "fmt"
 
-func main(){
-	ch :=make(chan int,3)
-go func(){
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
-}()
+func main() {
+	ch := make(chan int, 3)
+	go func() {
+		fmt.Println(<-ch)
+		fmt.Println(<-ch)
+	}()
 	ch <- 10
 	ch <- 20
 	ch <- 30

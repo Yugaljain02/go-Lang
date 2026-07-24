@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"fmt"
 	"GoProject/ecommerce/internal/database"
+	"fmt"
 )
 
 func Login() {

@@ -1,10 +1,12 @@
 package main
-import"fmt"
-func main(){
-	defer func(){
-		r:= recover()
-		if r !=nil{
-			fmt.Println("Recovered : ",r)
+
+import "fmt"
+
+func main() {
+	defer func() {
+		r := recover()
+		if r != nil {
+			fmt.Println("Recovered : ", r)
 		}
 	}()
 	fmt.Println("first")
